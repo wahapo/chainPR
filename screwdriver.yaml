@@ -1,0 +1,14 @@
+annotations:
+  screwdriver.cd/chainPR: true
+
+jobs
+  job-1:
+    requires: ~pr
+    image: node:14
+    steps:
+      - echo ${PR_BRANCH_NAME}
+  job-2:
+    requires: job-1
+    image: node:14
+    steps:
+      - echo ${PR_BRANCH_NAME}
