@@ -1,7 +1,7 @@
 annotations:
   screwdriver.cd/chainPR: true
 
-jobs
+jobs:
   job-1:
     requires: ~pr
     image: node:14
