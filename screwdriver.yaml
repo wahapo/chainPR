@@ -10,6 +10,6 @@ jobs:
   job-2:
     requires: job-1
     image: node:14
-    blockedBy: [ ~job-1 ]
+    blockedBy: [ ~job-1, ~sd@7309:main ]
     steps:
       - echo ${PR_BRANCH_NAME}
